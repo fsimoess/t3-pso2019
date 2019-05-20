@@ -46,6 +46,9 @@ for num in range(data['num']-3, data['num']+1):
 	img = requests.get(img_data['img']).content #pega a imagem
 
 	image_name = str(num)+'-'+img_data['safe_title']+'.png' #string auxiliar para pegar o nome do arquivo
+	print(image_name)
+	image_name = image_name.replace('/','')
+	print(image_name)
 
 	pos = find_position_folder(image_name, diretorio, pos)
 
